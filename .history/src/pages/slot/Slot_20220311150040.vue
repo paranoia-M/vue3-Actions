@@ -1,0 +1,41 @@
+<template>
+  <div>
+    <h1>插槽父元</h1>
+
+    <!-- 具名插槽 -->
+    <slot-header>
+      <template #header-top>
+        <div>slot header-top插槽内容</div>
+      </template>
+      <template #header-middle>
+        <div>slot header-middle插槽内容</div>
+      </template>
+      <template #[header-bottom]>
+        <div>slot header-bottom插槽内容</div>
+      </template>
+    </slot-header>
+
+    <slot-item>slot插槽内容</slot-item>
+    <slot-footer>slot footer插槽内容</slot-footer>
+  </div>
+</template>
+
+<script setup>
+/**
+ * 插槽内容可以访问到父组件的数据，无法发访问到子组件的数据，
+ * 任何父组件模板中的东西都是被编译到父组件的作用域中，而任何子组件模板中的东西都只被编译到子组件的作用域中
+ *
+ * 具名插槽
+ * 如果子组件里面有多个插槽就要给他们都命名，在父组件里面可以通过<template #slotName></template>来确定各个插槽内的具体值
+ *
+ * 动态插槽名
+ *
+ *
+ */
+import SlotFooter from "./SlotFooter.vue";
+import SlotHeader from "./SlotHeader.vue";
+import SlotItem from "./SlotItem.vue";
+</script>
+
+<style>
+</style>

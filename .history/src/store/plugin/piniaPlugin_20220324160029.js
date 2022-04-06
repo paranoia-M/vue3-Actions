@@ -1,0 +1,3 @@
+function SecretPiniaPlugin() {
+  return { secret };
+}

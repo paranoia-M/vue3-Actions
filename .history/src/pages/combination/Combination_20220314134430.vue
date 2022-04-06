@@ -1,0 +1,31 @@
+<template>
+  <div>
+    <p>可组合函数，鼠标跟踪功能 {{ x }},{{ y }}</p>
+  </div>
+</template>
+
+<script setup>
+/**
+ *
+ * 可组合函数
+ *
+ * 可组合函数是一个利用vue组合式api来封装和复用有逻辑状态的函数
+ *
+ * useMouse也可以传递参数，如果要传递参数，应该注意传递的参数是否为ref对象，如果是ref，那么他的value会被返回，如果不是ref，会原样返回，因此可以使用 unref ; const value = unref(maybeRef)  这里(maybeRef是参数)
+ *
+ * 可组合函数始终返回一个ref对象的原因是能够解构出来可组合函数的返回值
+ *
+ * 也可以将可组合函数用reactive包装  const mouse = reactive(useMouse())  这样可以通过property的方式拿到想要的数据
+ *
+ * 在可组合函数中执行副作用
+ *在可组合函数中的确可以执行副作用 (例如：添加 DOM 事件监听器或者请求数据)，但请注意以下规则：
+ 如果你在一个应用中使用了服务器端渲染 (SSR)，请确保在后置加载的声明钩子上执行 DOM 相关的副作用，例如：onMounted()。这些钩子仅会在浏览器中使用，因此可以确保能访问到 DOM。
+ *
+ */
+import { useMouse } from "./common/mouse";
+
+const { x, y } = useMouse();
+</script>
+
+<style>
+</style>

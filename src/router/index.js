@@ -6,8 +6,8 @@ import {
 import { defineAsyncComponent } from "vue";
 
 const router = createRouter({
-  history: createWebHistory(),
-  // history: createWebHashHistory(),
+  // history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: [
     {
       path: "/",

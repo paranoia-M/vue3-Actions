@@ -19,5 +19,5 @@
     "@vitejs/plugin-vue": "^2.0.0",
     "vite": "^2.7.2"
   },
-  "homepage": "https://[paranoia-M].github.io/vue3-demo"
+  "homepage": "https://[paranoia-M].github.io/vue3-demo/index.html"
 }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    组件相关
+    组件相关: git action 自动部署新增内容
     <h1>父组件</h1>
     <list-item
       v-for="post in posts"
